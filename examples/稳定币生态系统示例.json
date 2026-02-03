@@ -1,0 +1,526 @@
+{
+    "projectName": "稳定币生态系统分析-2024",
+    "ecosystemName": "稳定币生态",
+    "singularityName": "跨境价值转移成本归零",
+    "singularityDesc": "稳定币将跨境汇款成本从$30-50压缩到<$1，结算时间从3-5天降至秒级，实现24/7/365服务，无最小转账门槛",
+    "phases": [
+        {
+            "id": 1,
+            "name": "萌芽期",
+            "startYear": 2014,
+            "endYear": 2017,
+            "task": "能不能做到？验证链上美元可行性"
+        },
+        {
+            "id": 2,
+            "name": "探索期",
+            "startYear": 2017,
+            "endYear": 2020,
+            "task": "有没有人要？ICO热潮验证真实需求"
+        },
+        {
+            "id": 3,
+            "name": "成长期",
+            "startYear": 2020,
+            "endYear": 2022,
+            "task": "能不能赚钱？DeFi Summer验证商业模式"
+        },
+        {
+            "id": 4,
+            "name": "平台期",
+            "startYear": 2022,
+            "endYear": 2024,
+            "task": "能成为别人构建的基础吗？CCTP+PayFi验证"
+        },
+        {
+            "id": 5,
+            "name": "生态期",
+            "startYear": 2024,
+            "endYear": 2026,
+            "task": "能让参与者离不开吗？监管框架+牌照稀缺性"
+        }
+    ],
+    "valueLayers": [
+        {
+            "id": 1,
+            "name": "要素与资产层",
+            "color": "#10B981",
+            "description": "美元主权信用、储备资产（国债）、区块链安全性——谁控制了原材料？",
+            "visiblePhases": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 2,
+            "name": "渠道与基础设施层",
+            "color": "#F59E0B",
+            "description": "公链结算层、跨链协议、稳定币发行协议——价值怎么流转？",
+            "visiblePhases": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 3,
+            "name": "场景与入口层",
+            "color": "#EC4899",
+            "description": "交易所、钱包、PayFi应用——用户在哪付钱？",
+            "visiblePhases": [
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 4,
+            "name": "规则与标准层",
+            "color": "#3B82F6",
+            "description": "监管牌照、审计标准、跨链标准——谁定义规则？",
+            "visiblePhases": [
+                3,
+                4,
+                5
+            ]
+        }
+    ],
+    "attributeTypes": [
+        {
+            "id": "element",
+            "name": "要素",
+            "color": "#10B981"
+        },
+        {
+            "id": "infra",
+            "name": "基础设施",
+            "color": "#F59E0B"
+        },
+        {
+            "id": "scene",
+            "name": "场景",
+            "color": "#EC4899"
+        },
+        {
+            "id": "rule",
+            "name": "规则",
+            "color": "#3B82F6"
+        },
+        {
+            "id": "issuer",
+            "name": "发行方",
+            "color": "#8B5CF6"
+        },
+        {
+            "id": "chain",
+            "name": "公链",
+            "color": "#06B6D4"
+        }
+    ],
+    "invariants": [
+        {
+            "id": "inv_usd_credit",
+            "typeId": "triangle",
+            "name": "美元主权信用",
+            "layerId": 1,
+            "note": "稳定币的终极锚定物，美元霸权在50年视角仍稳固。强穿越不动点。"
+        },
+        {
+            "id": "inv_reserve",
+            "typeId": "circle",
+            "name": "储备资产",
+            "layerId": 1,
+            "note": "美国国债、银行存款——发行方利息收入的来源"
+        },
+        {
+            "id": "inv_chain_security",
+            "typeId": "square",
+            "name": "区块链安全性",
+            "layerId": 1,
+            "note": "算力/质押保障的结算最终性"
+        },
+        {
+            "id": "inv_settlement",
+            "typeId": "diamond",
+            "name": "公链结算层",
+            "layerId": 2,
+            "note": "高安全结算层是强穿越不动点(8/10)，开发者+流动性网络效应锁定"
+        },
+        {
+            "id": "inv_usd_issuer",
+            "typeId": "triangle",
+            "name": "USD稳定币发行人",
+            "layerId": 2,
+            "note": "强穿越不动点(9/10)：只要美元是全球储备货币，这个位置必然存在"
+        },
+        {
+            "id": "inv_crosschain",
+            "typeId": "circle",
+            "name": "跨链协议标准",
+            "layerId": 2,
+            "note": "位置型不动点(6/10)：互操作性需求决定，标准竞争仍在进行"
+        },
+        {
+            "id": "inv_user_entry",
+            "typeId": "square",
+            "name": "法币出入金桥接",
+            "layerId": 3,
+            "note": "位置型不动点(5/10)：银行系统对接需要牌照"
+        },
+        {
+            "id": "inv_license",
+            "typeId": "diamond",
+            "name": "监管牌照",
+            "layerId": 4,
+            "note": "牌照稀缺性正在形成，合规成为新壁垒"
+        },
+        {
+            "id": "inv_audit",
+            "typeId": "circle",
+            "name": "审计与储备证明",
+            "layerId": 4,
+            "note": "位置型不动点(6/10)：实时储备证明成为标配"
+        },
+        {
+            "id": "inv_algo_stablecoin",
+            "typeId": "cross",
+            "name": "算法稳定币",
+            "layerId": 2,
+            "note": "已被证伪的伪不动点——UST崩盘教训：没有硬约束锚定的位置不是真正的不动点"
+        }
+    ],
+    "entities": [
+        {
+            "id": "us_gov",
+            "name": "美联储/美国政府",
+            "layerId": 1,
+            "primaryColor": "#1E40AF",
+            "attributes": [
+                "element"
+            ],
+            "note": "美元信用的最终来源，不动点占位者"
+        },
+        {
+            "id": "treasury",
+            "name": "美国国债市场",
+            "layerId": 1,
+            "primaryColor": "#059669",
+            "attributes": [
+                "element"
+            ],
+            "note": "稳定币储备的主要投向，利息收入来源"
+        },
+        {
+            "id": "tether",
+            "name": "Tether (USDT)",
+            "layerId": 2,
+            "primaryColor": "#26A17B",
+            "attributes": [
+                "issuer",
+                "infra"
+            ],
+            "note": "2014年诞生，市占率~70%，2023年净利润$6.2B+。从Omni迁移到ERC-20再到多链部署(Tron为主)。先发优势+网络效应锁定"
+        },
+        {
+            "id": "circle",
+            "name": "Circle (USDC)",
+            "layerId": 2,
+            "primaryColor": "#2775CA",
+            "attributes": [
+                "issuer",
+                "infra",
+                "rule"
+            ],
+            "note": "2018年与Coinbase联合推出，市占率~20%，合规优先路线。2023年SVB危机后恢复，申请IPO中。CCTP成为跨链标准候选"
+        },
+        {
+            "id": "makerdao",
+            "name": "MakerDAO (DAI)",
+            "layerId": 2,
+            "primaryColor": "#6ACEBB",
+            "attributes": [
+                "issuer",
+                "infra"
+            ],
+            "note": "2017年推出，超额抵押ETH生成。从原生物种进化为半拟态物种——2022年后接受USDC作为抵押品"
+        },
+        {
+            "id": "ust",
+            "name": "UST/Luna (已崩盘)",
+            "layerId": 2,
+            "primaryColor": "#CFD3D7",
+            "attributes": [
+                "issuer"
+            ],
+            "note": "2022年5月崩盘，$40B市值归零。教训：用套利机制代替真实抵押+20%高收益率吸引存款→死亡螺旋不可避免"
+        },
+        {
+            "id": "paypal",
+            "name": "PayPal (PYUSD)",
+            "layerId": 2,
+            "primaryColor": "#003087",
+            "attributes": [
+                "issuer",
+                "scene"
+            ],
+            "note": "2023年推出，传统金融入场信号"
+        },
+        {
+            "id": "ethereum",
+            "name": "以太坊",
+            "layerId": 2,
+            "primaryColor": "#627EEA",
+            "attributes": [
+                "chain",
+                "infra"
+            ],
+            "note": "2017年成为稳定币迁移的关键转折点——高价值结算层，DeFi生态核心"
+        },
+        {
+            "id": "tron",
+            "name": "Tron",
+            "layerId": 2,
+            "primaryColor": "#FF0013",
+            "attributes": [
+                "chain",
+                "infra"
+            ],
+            "note": "2019年USDT爆发——低成本转账，零售/新兴市场首选"
+        },
+        {
+            "id": "solana",
+            "name": "Solana",
+            "layerId": 2,
+            "primaryColor": "#9945FF",
+            "attributes": [
+                "chain",
+                "infra"
+            ],
+            "note": "高性能链，交易/PayFi场景，USDC主要部署链之一"
+        },
+        {
+            "id": "cctp",
+            "name": "Circle CCTP",
+            "layerId": 2,
+            "primaryColor": "#2775CA",
+            "attributes": [
+                "infra"
+            ],
+            "note": "2022年推出，跨链转账协议标准候选，Circle的基础设施野心"
+        },
+        {
+            "id": "wormhole",
+            "name": "Wormhole",
+            "layerId": 2,
+            "primaryColor": "#9945FF",
+            "attributes": [
+                "infra"
+            ],
+            "note": "跨链桥协议，与CCTP竞争中"
+        },
+        {
+            "id": "binance",
+            "name": "Binance",
+            "layerId": 3,
+            "primaryColor": "#F0B90B",
+            "attributes": [
+                "scene"
+            ],
+            "note": "中心化交易所入口，全球最大交易量"
+        },
+        {
+            "id": "coinbase",
+            "name": "Coinbase",
+            "layerId": 3,
+            "primaryColor": "#0052FF",
+            "attributes": [
+                "scene",
+                "rule"
+            ],
+            "note": "合规交易所+USDC联合发行方，美国市场入口"
+        },
+        {
+            "id": "metamask",
+            "name": "MetaMask",
+            "layerId": 3,
+            "primaryColor": "#F6851B",
+            "attributes": [
+                "scene"
+            ],
+            "note": "自托管钱包入口，DeFi用户核心工具"
+        },
+        {
+            "id": "blackrock",
+            "name": "贝莱德BUIDL",
+            "layerId": 3,
+            "primaryColor": "#000000",
+            "attributes": [
+                "scene",
+                "element"
+            ],
+            "note": "2024年推出机构级代币化基金，传统金融巨头入场标志"
+        },
+        {
+            "id": "mica",
+            "name": "MiCA框架",
+            "layerId": 4,
+            "primaryColor": "#003399",
+            "attributes": [
+                "rule"
+            ],
+            "note": "2023年通过，2024年落地，欧盟监管框架明确化"
+        },
+        {
+            "id": "big4_audit",
+            "name": "四大审计机构",
+            "layerId": 4,
+            "primaryColor": "#1E3A5F",
+            "attributes": [
+                "rule"
+            ],
+            "note": "储备审计+储备证明标准，合规背书"
+        },
+        {
+            "id": "western_union",
+            "name": "Western Union",
+            "layerId": 3,
+            "primaryColor": "#FFDD00",
+            "attributes": [
+                "scene"
+            ],
+            "note": "【做空标的】跨境汇款中介——被原爆点打穿中，新兴市场转账量已被稳定币超越"
+        },
+        {
+            "id": "correspondent_banks",
+            "name": "代理行网络",
+            "layerId": 3,
+            "primaryColor": "#6B7280",
+            "attributes": [
+                "infra"
+            ],
+            "note": "【做空标的】SWIFT+代理行的'过路费'被归零中"
+        }
+    ],
+    "connections": [
+        {
+            "sourceType": "invariant",
+            "sourceId": "inv_usd_credit",
+            "targetType": "entity",
+            "targetId": "us_gov"
+        },
+        {
+            "sourceType": "invariant",
+            "sourceId": "inv_reserve",
+            "targetType": "entity",
+            "targetId": "treasury"
+        },
+        {
+            "sourceType": "invariant",
+            "sourceId": "inv_settlement",
+            "targetType": "entity",
+            "targetId": "ethereum"
+        },
+        {
+            "sourceType": "invariant",
+            "sourceId": "inv_settlement",
+            "targetType": "entity",
+            "targetId": "tron"
+        },
+        {
+            "sourceType": "invariant",
+            "sourceId": "inv_usd_issuer",
+            "targetType": "entity",
+            "targetId": "tether"
+        },
+        {
+            "sourceType": "invariant",
+            "sourceId": "inv_usd_issuer",
+            "targetType": "entity",
+            "targetId": "circle"
+        },
+        {
+            "sourceType": "invariant",
+            "sourceId": "inv_crosschain",
+            "targetType": "entity",
+            "targetId": "cctp"
+        },
+        {
+            "sourceType": "invariant",
+            "sourceId": "inv_crosschain",
+            "targetType": "entity",
+            "targetId": "wormhole"
+        },
+        {
+            "sourceType": "invariant",
+            "sourceId": "inv_license",
+            "targetType": "entity",
+            "targetId": "circle"
+        },
+        {
+            "sourceType": "invariant",
+            "sourceId": "inv_license",
+            "targetType": "entity",
+            "targetId": "mica"
+        },
+        {
+            "sourceType": "invariant",
+            "sourceId": "inv_audit",
+            "targetType": "entity",
+            "targetId": "big4_audit"
+        },
+        {
+            "sourceType": "invariant",
+            "sourceId": "inv_algo_stablecoin",
+            "targetType": "entity",
+            "targetId": "ust"
+        },
+        {
+            "sourceType": "entity",
+            "sourceId": "tether",
+            "targetType": "entity",
+            "targetId": "tron"
+        },
+        {
+            "sourceType": "entity",
+            "sourceId": "circle",
+            "targetType": "entity",
+            "targetId": "ethereum"
+        },
+        {
+            "sourceType": "entity",
+            "sourceId": "circle",
+            "targetType": "entity",
+            "targetId": "coinbase"
+        },
+        {
+            "sourceType": "entity",
+            "sourceId": "circle",
+            "targetType": "entity",
+            "targetId": "cctp"
+        },
+        {
+            "sourceType": "entity",
+            "sourceId": "makerdao",
+            "targetType": "entity",
+            "targetId": "ethereum"
+        },
+        {
+            "sourceType": "entity",
+            "sourceId": "coinbase",
+            "targetType": "entity",
+            "targetId": "circle"
+        },
+        {
+            "sourceType": "entity",
+            "sourceId": "blackrock",
+            "targetType": "entity",
+            "targetId": "ethereum"
+        }
+    ]
+}

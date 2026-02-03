@@ -1,0 +1,174 @@
+{
+  "projectName": "AI生态系统分析-2024",
+  "ecosystemName": "AI大模型生态",
+  "singularityName": "Transformer架构",
+  "singularityDesc": "2017年Google提出Transformer架构，消除了序列处理的并行化约束，使大规模语言模型成为可能，开启了AI新纪元",
+
+  "phases": [
+    { "id": 1, "name": "萌芽期", "startYear": 2017, "endYear": 2020, "proximity": "0-5%", "task": "验证Transformer可行性" },
+    { "id": 2, "name": "探索期", "startYear": 2020, "endYear": 2022, "proximity": "5-20%", "task": "GPT-3展示涌现能力" },
+    { "id": 3, "name": "爆发期", "startYear": 2022, "endYear": 2024, "proximity": "20-40%", "task": "ChatGPT引爆市场" },
+    { "id": 4, "name": "平台期", "startYear": 2024, "endYear": 2026, "proximity": "40-70%", "task": "生态整合与商业化" }
+  ],
+
+  "valueLayers": [
+    { "id": 1, "name": "要素层", "color": "#10B981", "description": "算力、数据、人才——谁垄断了源头？", "visiblePhases": [1, 2, 3, 4] },
+    { "id": 2, "name": "基础设施层", "color": "#F59E0B", "description": "云服务、模型API、开发框架——谁掌握了渠道？", "visiblePhases": [1, 2, 3, 4] },
+    { "id": 3, "name": "场景与入口层", "color": "#EC4899", "description": "应用产品、用户界面——谁控制了入口？", "visiblePhases": [2, 3, 4] },
+    { "id": 4, "name": "规则与标准层", "color": "#3B82F6", "description": "AI安全标准、监管政策——谁定义了规则？", "visiblePhases": [3, 4] }
+  ],
+
+  "attributeTypes": [
+    { "id": "compute", "name": "算力", "color": "#10B981" },
+    { "id": "data", "name": "数据", "color": "#8B5CF6" },
+    { "id": "model", "name": "模型", "color": "#F59E0B" },
+    { "id": "product", "name": "产品", "color": "#EC4899" },
+    { "id": "platform", "name": "平台", "color": "#06B6D4" },
+    { "id": "regulation", "name": "监管", "color": "#3B82F6" }
+  ],
+
+  "invariants": [
+    { "id": "inv1", "typeId": "triangle", "name": "算力", "layerId": 1, "note": "GPU/TPU等AI芯片算力，是AI训练和推理的核心生产要素" },
+    { "id": "inv2", "typeId": "circle", "name": "数据", "layerId": 1, "note": "高质量训练数据和海量用户数据，是模型能力的燃料" },
+    { "id": "inv3", "typeId": "square", "name": "基础模型", "layerId": 2, "note": "大语言模型的核心能力，决定了应用的天花板" },
+    { "id": "inv4", "typeId": "diamond", "name": "用户入口", "layerId": 3, "note": "C端用户的触达渠道，决定了商业化的可能性" },
+    { "id": "inv5", "typeId": "cross", "name": "安全标准", "layerId": 4, "note": "AI对齐和安全标准，决定了行业的发展边界" }
+  ],
+
+  "entities": [
+    {
+      "id": "ent1",
+      "name": "NVIDIA",
+      "layerId": 1,
+      "invariantId": "inv1",
+      "primaryColor": "#76B900",
+      "attributes": ["compute"],
+      "note": "GPU市场份额超80%，AI训练芯片绝对龙头，CUDA生态护城河深厚"
+    },
+    {
+      "id": "ent2",
+      "name": "OpenAI",
+      "layerId": 2,
+      "invariantId": "inv3",
+      "primaryColor": "#412991",
+      "attributes": ["model", "product"],
+      "note": "GPT系列模型开创者，ChatGPT月活超1亿，定义了AI产品形态"
+    },
+    {
+      "id": "ent3",
+      "name": "微软",
+      "layerId": 2,
+      "primaryColor": "#00A4EF",
+      "attributes": ["compute", "platform", "product"],
+      "note": "Azure云服务+OpenAI战略合作+Copilot全家桶，全栈布局"
+    },
+    {
+      "id": "ent4",
+      "name": "Google",
+      "layerId": 2,
+      "primaryColor": "#4285F4",
+      "attributes": ["compute", "model", "product", "data"],
+      "note": "TPU自研算力+Gemini模型+搜索/YouTube数据优势，全面竞争"
+    },
+    {
+      "id": "ent5",
+      "name": "Anthropic",
+      "layerId": 2,
+      "primaryColor": "#D4A574",
+      "attributes": ["model", "regulation"],
+      "note": "Claude模型，Constitutional AI理念，AI安全研究领先者"
+    },
+    {
+      "id": "ent6",
+      "name": "Meta",
+      "layerId": 2,
+      "primaryColor": "#1877F2",
+      "attributes": ["model", "data", "platform"],
+      "note": "Llama开源模型策略，30亿社交用户数据，开源生态建设者"
+    },
+    {
+      "id": "ent7",
+      "name": "AWS",
+      "layerId": 2,
+      "primaryColor": "#FF9900",
+      "attributes": ["compute", "platform"],
+      "note": "云计算市场第一，Bedrock多模型服务，Trainium自研芯片"
+    },
+    {
+      "id": "ent8",
+      "name": "Hugging Face",
+      "layerId": 2,
+      "primaryColor": "#FFD21E",
+      "attributes": ["platform", "model"],
+      "note": "开源模型社区Hub，模型分发的GitHub，开发者生态核心"
+    },
+    {
+      "id": "ent9",
+      "name": "特斯拉",
+      "layerId": 1,
+      "primaryColor": "#CC0000",
+      "attributes": ["compute", "data"],
+      "note": "Dojo超算+FSD数据飞轮，自动驾驶数据独家优势"
+    },
+    {
+      "id": "ent10",
+      "name": "Scale AI",
+      "layerId": 1,
+      "invariantId": "inv2",
+      "primaryColor": "#7C3AED",
+      "attributes": ["data"],
+      "note": "AI数据标注龙头，为OpenAI等提供高质量训练数据"
+    },
+    {
+      "id": "ent11",
+      "name": "Midjourney",
+      "layerId": 3,
+      "invariantId": "inv4",
+      "primaryColor": "#000000",
+      "attributes": ["product"],
+      "note": "AI绘画产品标杆，Discord社区运营模式创新"
+    },
+    {
+      "id": "ent12",
+      "name": "Runway",
+      "layerId": 3,
+      "primaryColor": "#6366F1",
+      "attributes": ["product", "model"],
+      "note": "AI视频生成领先者，Gen-2模型，创意工具定位"
+    },
+    {
+      "id": "ent13",
+      "name": "Perplexity",
+      "layerId": 3,
+      "primaryColor": "#20B2AA",
+      "attributes": ["product"],
+      "note": "AI搜索新范式，挑战Google搜索入口地位"
+    },
+    {
+      "id": "ent14",
+      "name": "Cohere",
+      "layerId": 2,
+      "primaryColor": "#39D353",
+      "attributes": ["model", "platform"],
+      "note": "企业级LLM服务，专注B端RAG和搜索场景"
+    },
+    {
+      "id": "ent15",
+      "name": "AMD",
+      "layerId": 1,
+      "primaryColor": "#ED1C24",
+      "attributes": ["compute"],
+      "note": "MI300系列追赶NVIDIA，ROCm生态建设中"
+    }
+  ],
+
+  "connections": [
+    { "sourceType": "invariant", "sourceId": "inv1", "targetType": "entity", "targetId": "ent1" },
+    { "sourceType": "invariant", "sourceId": "inv2", "targetType": "entity", "targetId": "ent10" },
+    { "sourceType": "invariant", "sourceId": "inv3", "targetType": "entity", "targetId": "ent2" },
+    { "sourceType": "invariant", "sourceId": "inv4", "targetType": "entity", "targetId": "ent11" },
+    { "sourceType": "entity", "sourceId": "ent2", "targetType": "entity", "targetId": "ent3" },
+    { "sourceType": "entity", "sourceId": "ent1", "targetType": "entity", "targetId": "ent3" },
+    { "sourceType": "entity", "sourceId": "ent1", "targetType": "entity", "targetId": "ent4" }
+  ]
+}

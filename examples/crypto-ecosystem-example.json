@@ -1,0 +1,305 @@
+{
+    "projectName": "Crypto生态系统示例",
+    "ecosystemName": "Crypto（加密资产）& Stablecoin",
+    "singularityName": "比特币",
+    "singularityDesc": "2009年比特币发布，开启了去中心化数字货币时代",
+    "phases": [
+        {
+            "id": 1,
+            "name": "萌芽期",
+            "startYear": 2009,
+            "endYear": 2015
+        },
+        {
+            "id": 2,
+            "name": "探索期",
+            "startYear": 2015,
+            "endYear": 2020
+        },
+        {
+            "id": 3,
+            "name": "成长期",
+            "startYear": 2020,
+            "endYear": 2024
+        },
+        {
+            "id": 4,
+            "name": "成熟期",
+            "startYear": 2024,
+            "endYear": 2028
+        }
+    ],
+    "valueLayers": [
+        {
+            "id": 1,
+            "name": "要素层",
+            "color": "#10B981",
+            "visiblePhases": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "heightWeight": 1
+        },
+        {
+            "id": 2,
+            "name": "基础设施层",
+            "color": "#F59E0B",
+            "visiblePhases": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "heightWeight": 1
+        },
+        {
+            "id": 3,
+            "name": "场景与入口层",
+            "color": "#EC4899",
+            "visiblePhases": [
+                2,
+                3,
+                4
+            ],
+            "heightWeight": 1
+        },
+        {
+            "id": 4,
+            "name": "规则与标准层",
+            "color": "#3B82F6",
+            "visiblePhases": [
+                3,
+                4
+            ],
+            "heightWeight": 1
+        }
+    ],
+    "attributeTypes": [
+        {
+            "id": "defi",
+            "name": "DeFi",
+            "color": "#8B5CF6"
+        },
+        {
+            "id": "cefi",
+            "name": "CeFi",
+            "color": "#06B6D4"
+        },
+        {
+            "id": "stablecoin",
+            "name": "稳定币",
+            "color": "#10B981"
+        },
+        {
+            "id": "exchange",
+            "name": "交易所",
+            "color": "#F59E0B"
+        }
+    ],
+    "invariants": [
+        {
+            "id": "inv1",
+            "typeId": "triangle",
+            "name": "去中心化",
+            "x": 200,
+            "y": 120,
+            "layerId": 1,
+            "note": "区块链的核心价值"
+        },
+        {
+            "id": "inv2",
+            "typeId": "circle",
+            "name": "价值稳定",
+            "x": 450,
+            "y": 180,
+            "layerId": 2,
+            "note": "稳定币的核心追求"
+        },
+        {
+            "id": "inv3",
+            "typeId": "diamond",
+            "name": "流动性",
+            "x": 700,
+            "y": 140,
+            "layerId": 3,
+            "note": "DeFi的核心指标"
+        }
+    ],
+    "entities": [
+        {
+            "id": "ent1",
+            "name": "Bitcoin",
+            "x": 150,
+            "y": 350,
+            "layerId": 1,
+            "primaryColor": "#F7931A",
+            "attributes": [],
+            "note": "第一个加密货币"
+        },
+        {
+            "id": "ent2",
+            "name": "Ethereum",
+            "x": 280,
+            "y": 280,
+            "layerId": 1,
+            "primaryColor": "#627EEA",
+            "attributes": [
+                "defi"
+            ],
+            "note": "智能合约平台"
+        },
+        {
+            "id": "ent3",
+            "name": "Tether",
+            "x": 350,
+            "y": 380,
+            "layerId": 2,
+            "primaryColor": "#26A17B",
+            "attributes": [
+                "stablecoin",
+                "cefi"
+            ],
+            "note": "最大的稳定币"
+        },
+        {
+            "id": "ent4",
+            "name": "USDC",
+            "x": 450,
+            "y": 320,
+            "layerId": 2,
+            "primaryColor": "#2775CA",
+            "attributes": [
+                "stablecoin",
+                "cefi"
+            ],
+            "note": "Circle发行的稳定币"
+        },
+        {
+            "id": "ent5",
+            "name": "Coinbase",
+            "x": 550,
+            "y": 260,
+            "layerId": 3,
+            "primaryColor": "#0052FF",
+            "attributes": [
+                "exchange",
+                "cefi"
+            ],
+            "note": "合规交易所"
+        },
+        {
+            "id": "ent6",
+            "name": "Binance",
+            "x": 600,
+            "y": 180,
+            "layerId": 3,
+            "primaryColor": "#F0B90B",
+            "attributes": [
+                "exchange"
+            ],
+            "note": "最大交易所"
+        },
+        {
+            "id": "ent7",
+            "name": "Uniswap",
+            "x": 680,
+            "y": 300,
+            "layerId": 3,
+            "primaryColor": "#FF007A",
+            "attributes": [
+                "defi"
+            ],
+            "note": "去中心化交易所"
+        },
+        {
+            "id": "ent8",
+            "name": "Aave",
+            "x": 750,
+            "y": 220,
+            "layerId": 3,
+            "primaryColor": "#B6509E",
+            "attributes": [
+                "defi"
+            ],
+            "note": "借贷协议"
+        },
+        {
+            "id": "ent9",
+            "name": "MakerDAO",
+            "x": 400,
+            "y": 200,
+            "layerId": 4,
+            "primaryColor": "#1AAB9B",
+            "attributes": [
+                "defi",
+                "stablecoin"
+            ],
+            "note": "DAI稳定币发行方"
+        },
+        {
+            "id": "ent10",
+            "name": "Chainlink",
+            "x": 820,
+            "y": 160,
+            "layerId": 4,
+            "primaryColor": "#375BD2",
+            "attributes": [
+                "defi"
+            ],
+            "note": "预言机网络"
+        }
+    ],
+    "connections": [
+        {
+            "id": "conn1",
+            "sourceType": "invariant",
+            "sourceId": "inv1",
+            "targetType": "entity",
+            "targetId": "ent1"
+        },
+        {
+            "id": "conn2",
+            "sourceType": "invariant",
+            "sourceId": "inv1",
+            "targetType": "entity",
+            "targetId": "ent2"
+        },
+        {
+            "id": "conn3",
+            "sourceType": "invariant",
+            "sourceId": "inv2",
+            "targetType": "entity",
+            "targetId": "ent3"
+        },
+        {
+            "id": "conn4",
+            "sourceType": "invariant",
+            "sourceId": "inv2",
+            "targetType": "entity",
+            "targetId": "ent4"
+        },
+        {
+            "id": "conn5",
+            "sourceType": "invariant",
+            "sourceId": "inv3",
+            "targetType": "entity",
+            "targetId": "ent7"
+        },
+        {
+            "id": "conn6",
+            "sourceType": "entity",
+            "sourceId": "ent2",
+            "targetType": "entity",
+            "targetId": "ent7"
+        },
+        {
+            "id": "conn7",
+            "sourceType": "entity",
+            "sourceId": "ent4",
+            "targetType": "entity",
+            "targetId": "ent5"
+        }
+    ]
+}
